@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAPS AND SETS </title>
+</head>
+<body>
+    
+ques 1:- <b> "Problem: You are given a string (STR) of length N, consisting of only the lower case English alphabet.
+              Your task is to remove all the duplicate occurrences of characters in the string."</b><br>
+    
+
+ans:- 
+<pre>
+   let text = "abcadeecfb"
+   let b = text.split("");
+   
+   var c = new Set(b);
+   b = [...c];
+   console.log(....c);
+
+</pre>
+
+<pre>
+    Input:-
+    abcadeecfb
+    
+    Output:-
+    abcdef
+</pre>
+
+
+
+ques 2:- <b>  "Problem:  You are given a string (STR) of length N, you have to print the count of all alphabet.(using maps)</b><br>   
+ans:- 
+<pre>
+    function printans(ans)
+    {
+      for(let[key,value]of ans)
+    {
+     console.log('${key} = ${value}');
+    }
+    }
+
+    function count(str,outp_map)
+    {
+      for(let i = 0 ; i < str.length ;i++);
+      {
+        let k = outp _ map. get ( str [ i ] ) ;
+        outp_map.set(str[i],k+1);
+    
+      }
+      printans(outp_map);
+    }
+
+    function count_occurs(test , callback)
+    {
+      if(test.length ===0)
+      {
+        console.log("empty string");
+        return ;
+      } 
+
+      else
+      {
+
+        <!-- map for storing count values -->
+        let ans = new Map();
+        for(let i = 0 ; i < test.length;i++)
+        {
+          ans.set(test[i],0);
+        }
+        callback(test,ans);
+      }
+    }
+    
+
+    let  test ="abcadeecfb";
+      count_occurs(test, count);
+         
+</pre>
+
+
+<pre>
+    Input:
+    abcadeecfb
+    
+    Output:
+    a=2
+    b=2
+    c=2
+    d=1
+    e=2
+    f=1"  
+
+</pre>
+
+
+</body>
+</html>
